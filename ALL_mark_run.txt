@@ -1,0 +1,3053 @@
+SQL> ------------- Question 1a  Insert data -----------------------------------------
+SQL> @Q1a-mc-insert.sql
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> -- Q1. Data Manipulation (20 marks)
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> /*
+SQL>(a) Load selected tables with your own additional test data: using the supplied Q1a-mc-insert.sql script 
+SQL>file, and the SQL commands which will insert, as a minimum, the following sample data -
+SQL>5 RESORTS,
+SQL>20 CABINS,
+SQL>25 BOOKINGS
+SQL>15 REVIEWS
+SQL>
+SQL>Please note, these are the minimum number of entries you must insert; you are encouraged to insert more 
+SQL>to provide a richer data set to draw from. The primary key values for this data must be hardcoded values 
+SQL>(ie. not make use of sequences) and consist of values below 100. Dates used should be chosen after the 1st 
+SQL>January 2019. 
+SQL>
+SQL>For this task ONLY, you may lookup and include values for the loaded tables/data directly where required. 
+SQL>
+SQL>The script must contain a single COMMIT statement as the last line of the script, ie. all listed actions 
+SQL>should be treated as a single transaction.
+SQL>
+SQL>In carrying out this task you must not add any further data to tables which were previously populated by 
+SQL>the supplied schema ﬁle.
+SQL>For all subsequent questions (Q1b onwards) you are not permitted to manually:
+SQL>- lookup a value in the database, obtain its primary key or the highest/lowest value in a column, or
+SQL>- calculate values external to the database eg. on a calculator and then use such values in your 
+SQL>answers.
+SQL> 
+SQL>You must ONLY use the data as provided in the text of the questions. Where a particular case for a word is 
+SQL>provided you must use that case. You may divide names such as Garrot Gooch into a first name of Garrot and 
+SQL>a last name of Gooch, if required. Failure to adhere to this requirement will result in a mark of 0 for the
+SQL>relevant question.
+SQL>
+SQL>[10 marks]
+SQL>*/
+SQL> 
+SQL> --RESORTS
+SQL> INSERT INTO resort VALUES (1, 'Byron Bay Exclusive Resort', '1 Karma Road', '2481', 4.6, 'Y', 1, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (2, 'Amazing Resort', '5B Lincoln Way', '3564', 4, 'N', 9, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (3, 'Alice Springs Resort', '1 Wonderland Road', '0870', 5, 'N', 5, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (4, 'Broome Awesome Resort', '1 Crystal Clear Road', '6725', 5, 'Y', 6, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (5, 'Byron Bay Super Resort', '675 Lennon Street', '2481', 3, 'N', 1, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (6, 'Gympie Luxury Resort', '1234 Gympie Hwy', '4570', NULL, 'Y', 4, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (7, 'Taree Exclusive Resort', '78 Station Road', '2430', 5, 'Y', 8, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (8, 'King Resort at Kingaroy', '23A Town Road', '4610', NULL, 'N', 3, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (9, 'Queen Resort', '45 Mount Isa Road', '4825', 2.5, 'N', 7, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO resort VALUES (10, 'Mudgee Budget Resort', '40 Moonlight Road', '2850', NULL, 'N', 2, 4);
+
+1 row inserted.
+
+SQL> 
+SQL> 
+SQL> --CABINS
+SQL> INSERT INTO cabin VALUES (1, 1, 2, 5,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 1, 3, 6,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 1, 2, 5,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 1, 3, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (5, 1, 2, 5,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (6, 1, 3, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (7, 1, 2, 4,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (9, 1, 2, 5,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (10, 1, 4, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (11, 1, 2, 5,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (12, 1, 3, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (14, 1, 2, 4,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (15, 1, 1, 2,'spacious living room/dining areas, modern kitchen, updated bathroom, large bedroom with firm memory-foam beds and upscale bedding. Fresh linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (16, 1, 1, 2,'spacious living room/dining areas, modern kitchen, updated bathroom, large bedroom with firm memory-foam beds and upscale bedding. Fresh linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 3, 1, 2,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. Queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 3, 1, 2,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. Queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 3, 2, 5,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 3, 2, 4,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (5, 3, 2, 4,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. Queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (6, 3, 2, 5,'Wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available. Queen or double hide-a-bed in living room.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 4, 1, 2,'bedrooms with firm memory-foam beds and bedding. Linens, blankets, towels, and pillows provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 4, 1, 3,'bedrooms with firm memory-foam beds and bedding. Linens, blankets, towels, and pillows provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 4, 2, 5,'bedrooms with firm memory-foam beds and bedding. Linens, blankets, towels, and pillows provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 2, 2, 5,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 2, 2, 5,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 2, 2, 5,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 5, 3, 6,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 5, 2, 4,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 5, 1, 2,'spacious living room/dining area, modern kitchen, updated bathroom, large bedroom with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 5, 1, 3,'spacious living room/dining area, modern kitchen, updated bathroom, large bedroom with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (5, 5, 2, 4,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (6, 5, 1, 3,'spacious living room/dining area, modern kitchen, updated bathroom, large Bedroom with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (7, 5, 1, 3,'spacious living room/dining area, modern kitchen, updated bathroom, Large bedroom with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (8, 5, 2, 4,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (9, 5, 3, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (10, 5, 3, 7,'spacious living room/dining areas, modern kitchen, updated bathrooms, large bedrooms with firm memory-foam beds and upscale bedding. Linens, blankets, towels, and pillows provided. Picnic tables, fire rings, and charcoal and gas grills provided.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 10, 1, 2,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 10, 2, 6,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 10, 3, 7,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 6, 3, 6,'Free Wi-Fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 6, 2, 5,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 6, 1, 2,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 6, 1, 3,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 7, 2, 4,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 7, 2, 5,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 7, 1, 2,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 7, 3, 5,'wood burning fireplace and kitchen with refrigerator, stove/oven, microwave, pots and pans, silverware, toaster, electric coffee pot, and utensils. Cribs, high chairs and roll-a-ways available.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 9, 1, 2,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 9, 2, 4,'Free Wi-Fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 9, 2, 5,'Free wi-fi. kitchen with refrigerator, stove, microwave, pots and pans, silverware, toaster and utensils.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (1, 8, 3, 7,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (2, 8, 3, 6,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (3, 8, 1, 2,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (4, 8, 1, 3,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (5, 8, 2, 4,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (6, 8, 2, 4,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> INSERT INTO cabin VALUES (7, 8, 2, 5,'kitchen with refrigerator and stove/oven. wood burning fireplace. free Wi-Fi.');
+
+1 row inserted.
+
+SQL> 
+SQL> 
+SQL> --BOOKINGS
+SQL> INSERT INTO booking VALUES (1, TO_DATE('01-jun-2019', 'DD-MON-YYYY'), TO_DATE('03-jun-2019', 'DD-MON-YYYY'), 2, 0, 120.50, 3, 1, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (2, TO_DATE('01-jun-2019', 'DD-MON-YYYY'), TO_DATE('07-jun-2019', 'DD-MON-YYYY'), 2, 2, 710.45, 5, 1, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (3, TO_DATE('06-jun-2019', 'DD-MON-YYYY'), TO_DATE('05-jul-2019', 'DD-MON-YYYY'), 1, 4, 2020.45, 2, 6, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (4, TO_DATE('06-nov-2019', 'DD-MON-YYYY'), TO_DATE('08-nov-2019', 'DD-MON-YYYY'), 3, 3, 407.45, 1, 2, 10);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (5, TO_DATE('07-dec-2019', 'DD-MON-YYYY'), TO_DATE('17-dec-2019', 'DD-MON-YYYY'), 2, 4, 1098.67, 5, 4, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (6, TO_DATE('07-jul-2019', 'DD-MON-YYYY'), TO_DATE('18-jul-2019', 'DD-MON-YYYY'), 4, 2, 876.56, 7, 6, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (7, TO_DATE('14-jul-2019', 'DD-MON-YYYY'), TO_DATE('21-jul-2019', 'DD-MON-YYYY'), 2, 2, 1575.80, 6, 3, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (8, TO_DATE('18-jul-2019', 'DD-MON-YYYY'), TO_DATE('20-jul-2019', 'DD-MON-YYYY'), 2, 1, 435.65, 8, 5, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (9, TO_DATE('10-jul-2019', 'DD-MON-YYYY'), TO_DATE('27-jul-2019', 'DD-MON-YYYY'), 2, 1, 675.87, 10, 2, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (10, TO_DATE('22-jul-2019', 'DD-MON-YYYY'), TO_DATE('25-jul-2019', 'DD-MON-YYYY'), 4, 1, 956.45, 9, 3, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (11, TO_DATE('01-jul-2019', 'DD-MON-YYYY'), TO_DATE('04-jul-2019', 'DD-MON-YYYY'), 2, 0, 221.65, 1, 16, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (12, TO_DATE('16-jul-2019', 'DD-MON-YYYY'), TO_DATE('19-jul-2019', 'DD-MON-YYYY'), 1, 3, 564.24, 3, 5, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (13, TO_DATE('18-jul-2019', 'DD-MON-YYYY'), TO_DATE('22-jul-2019', 'DD-MON-YYYY'), 2, 2, 723.17, 4, 4, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (14, TO_DATE('03-jul-2019', 'DD-MON-YYYY'), TO_DATE('07-jul-2019', 'DD-MON-YYYY'), 5, 2, 754.31, 5, 3, 10);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (15, TO_DATE('07-aug-2019', 'DD-MON-YYYY'), TO_DATE('10-aug-2019', 'DD-MON-YYYY'), 2, 3, 765.45, 6, 3, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (16, TO_DATE('10-jul-2019', 'DD-MON-YYYY'), TO_DATE('11-jul-2019', 'DD-MON-YYYY'), 2, 3, 450.34, 1, 9, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (17, TO_DATE('11-jul-2019', 'DD-MON-YYYY'), TO_DATE('17-jul-2019', 'DD-MON-YYYY'), 2, 1, 897.98, 3, 3, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (18, TO_DATE('13-jul-2019', 'DD-MON-YYYY'), TO_DATE('15-jul-2019', 'DD-MON-YYYY'), 3, 2, 754.89, 5, 1, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (19, TO_DATE('03-aug-2019', 'DD-MON-YYYY'), TO_DATE('06-aug-2019', 'DD-MON-YYYY'), 2, 4, 786.35, 9, 9, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (20, TO_DATE('08-aug-2019', 'DD-MON-YYYY'), TO_DATE('10-aug-2019', 'DD-MON-YYYY'), 3, 0, 329.45, 7, 7, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (21, TO_DATE('15-aug-2019', 'DD-MON-YYYY'), TO_DATE('18-aug-2019', 'DD-MON-YYYY'), 2, 0, 317.80, 8, 1, 10);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (22, TO_DATE('17-aug-2019', 'DD-MON-YYYY'), TO_DATE('24-aug-2019', 'DD-MON-YYYY'), 2, 2, 1298.00, 10, 5, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (23, TO_DATE('19-aug-2019', 'DD-MON-YYYY'), TO_DATE('22-aug-2019', 'DD-MON-YYYY'), 4, 2, 1098.87, 4, 1, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (24, TO_DATE('18-aug-2019', 'DD-MON-YYYY'), TO_DATE('21-aug-2019', 'DD-MON-YYYY'), 3, 3, 546.45, 6, 1, 6);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (25, TO_DATE('01-aug-2019', 'DD-MON-YYYY'), TO_DATE('05-aug-2019', 'DD-MON-YYYY'), 3, 0, 300.00, 5, 2, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (26, TO_DATE('07-aug-2019', 'DD-MON-YYYY'), TO_DATE('11-aug-2019', 'DD-MON-YYYY'), 4, 1, 867.56, 1, 2, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (27, TO_DATE('25-aug-2019', 'DD-MON-YYYY'), TO_DATE('30-aug-2019', 'DD-MON-YYYY'), 3, 2, 865.34, 3, 1, 6);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (28, TO_DATE('01-sep-2019', 'DD-MON-YYYY'), TO_DATE('04-sep-2019', 'DD-MON-YYYY'), 4, 0, 454.35, 6, 1, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (29, TO_DATE('03-sep-2019', 'DD-MON-YYYY'), TO_DATE('04-sep-2019', 'DD-MON-YYYY'), 2, 3, 187.67, 2, 2, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (30, TO_DATE('18-aug-2019', 'DD-MON-YYYY'), TO_DATE('21-aug-2019', 'DD-MON-YYYY'), 2, 0, 200.67, 4, 1, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (31, TO_DATE('24-aug-2019', 'DD-MON-YYYY'), TO_DATE('28-aug-2019', 'DD-MON-YYYY'), 2, 0, 240.00, 5, 1, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (32, TO_DATE('14-sep-2019', 'DD-MON-YYYY'), TO_DATE('20-sep-2019', 'DD-MON-YYYY'), 2, 4, 1856.45, 8, 1, 6);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (33, TO_DATE('27-aug-2019', 'DD-MON-YYYY'), TO_DATE('03-sep-2019', 'DD-MON-YYYY'), 3, 1, 675.89, 5, 1, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (34, TO_DATE('22-aug-2019', 'DD-MON-YYYY'), TO_DATE('25-aug-2019', 'DD-MON-YYYY'), 2, 2, 564.34, 9, 3, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (35, TO_DATE('29-aug-2019', 'DD-MON-YYYY'), TO_DATE('30-aug-2019', 'DD-MON-YYYY'), 1, 2, 213.65, 7, 7, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (36, TO_DATE('04-sep-2019', 'DD-MON-YYYY'), TO_DATE('10-sep-2019', 'DD-MON-YYYY'), 2, 3, 765.54, 10, 2, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (37, TO_DATE('02-oct-2019', 'DD-MON-YYYY'), TO_DATE('10-oct-2019', 'DD-MON-YYYY'), 4, 2, 1600.65, 2, 9, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (38, TO_DATE('10-dec-2019', 'DD-MON-YYYY'), TO_DATE('12-dec-2019', 'DD-MON-YYYY'), 4, 1, 345.34, 3, 2, 6);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (39, TO_DATE('25-aug-2019', 'DD-MON-YYYY'), TO_DATE('29-aug-2019', 'DD-MON-YYYY'), 2, 3, 1598.00, 6, 12, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (40, TO_DATE('28-aug-2019', 'DD-MON-YYYY'), TO_DATE('02-sep-2019', 'DD-MON-YYYY'), 4, 0, 400.00, 3, 3, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (41, TO_DATE('29-aug-2019', 'DD-MON-YYYY'), TO_DATE('03-sep-2019', 'DD-MON-YYYY'), 2, 3, 765.67, 10, 6, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (42, TO_DATE('05-sep-2019', 'DD-MON-YYYY'), TO_DATE('07-sep-2019', 'DD-MON-YYYY'), 2, 3, 430.54, 6, 2, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (43, TO_DATE('10-sep-2019', 'DD-MON-YYYY'), TO_DATE('20-sep-2019', 'DD-MON-YYYY'), 1, 4, 1200.67, 5, 6, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (44, TO_DATE('20-sep-2019', 'DD-MON-YYYY'), TO_DATE('24-sep-2019', 'DD-MON-YYYY'), 2, 3, 783.65, 9, 4, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (45, TO_DATE('03-oct-2019', 'DD-MON-YYYY'), TO_DATE('09-oct-2019', 'DD-MON-YYYY'), 4, 0, 787.45, 4, 1, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (46, TO_DATE('07-oct-2019', 'DD-MON-YYYY'), TO_DATE('13-oct-2019', 'DD-MON-YYYY'), 3, 2, 564.34, 3, 3, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (47, TO_DATE('08-dec-2019', 'DD-MON-YYYY'), TO_DATE('10-dec-2019', 'DD-MON-YYYY'), 1, 4, 564.34, 7, 6, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (48, TO_DATE('03-oct-2019', 'DD-MON-YYYY'), TO_DATE('07-oct-2019', 'DD-MON-YYYY'), 2, 1, 543.39, 9, 1, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (49, TO_DATE('03-nov-2019', 'DD-MON-YYYY'), TO_DATE('05-nov-2019', 'DD-MON-YYYY'), 4, 0, 200.00, 2, 2, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO booking VALUES (50, TO_DATE('10-nov-2019', 'DD-MON-YYYY'), TO_DATE('14-nov-2019', 'DD-MON-YYYY'), 3, 0, 645.49, 7, 2, 10);
+
+1 row inserted.
+
+SQL> 
+SQL> 
+SQL> --REVIEWS
+SQL> INSERT INTO review VALUES(1, 'Excellent resort and good staff!', TO_DATE('04-aug-2019', 'DD-MON-YYYY'), 5, 3, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(2, 'Great location and GOOD service!', TO_DATE('10-aug-2019', 'DD-MON-YYYY'), 5, 2, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(3, 'Very friendly staff. Clean cabins! :-)', TO_DATE('19-aug-2019', 'DD-MON-YYYY'), 5, 7, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(4, 'Good but expensive!', TO_DATE('22-aug-2019', 'DD-MON-YYYY'), 4, 6, 2);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(5, 'all good!', TO_DATE('29-aug-2019', 'DD-MON-YYYY'), 5, 10, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(6, 'Kitchen was not very clean, overall very good experience.', TO_DATE('01-sep-2019', 'DD-MON-YYYY'), 3, 1, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(7, 'Great place to stay!', TO_DATE('10-sep-2019', 'DD-MON-YYYY'), 5, 3, 3);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(8, 'will not come back!', TO_DATE('15-sep-2019', 'DD-MON-YYYY'), 1, 1, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(9, 'Excellent service!', TO_DATE('01-oct-2019', 'DD-MON-YYYY'), 5, 10, 1);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(10, 'Exceptinal cabins and service!', TO_DATE('01-oct-2019', 'DD-MON-YYYY'), 5, 9, 4);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(11, 'not a good experience!', TO_DATE('02-oct-2019', 'DD-MON-YYYY'), 2, 4, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(12, 'Value for money.', TO_DATE('02-oct-2019', 'DD-MON-YYYY'), 3, 7, 5);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(13, 'clean rooms and great kitchen. :-)', TO_DATE('03-oct-2019', 'DD-MON-YYYY'), 5, 4, 7);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(14, 'Stay was OK only.', TO_DATE('03-oct-2019', 'DD-MON-YYYY'), 2, 10, 9);
+
+1 row inserted.
+
+SQL> INSERT INTO review VALUES(15, 'Enjoyed the stay!', TO_DATE('03-oct-2019', 'DD-MON-YYYY'), 5, 9, 1);
+
+1 row inserted.
+
+SQL> 
+SQL> -- The script must contain a single COMMIT statement as the last line of the script, 
+SQL> -- ie. all listed actions should be treated as a single transaction.
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Rows added
+SQL> set echo off
+
+Table Loaded        COUNT(*)
+----------------- ----------
+1. RESORT Rows:           10
+2. CABIN Rows:            57
+3. BOOKING Rows:          50
+4. REVIEW Rows:           15
+
+SQL> -- Check of booking dates/cabin capacity vs booked sleepers and Cabin Bedrooms
+SQL> -------------------------------------------------------------------------------
+SQL> set echo off
+
+BOOKING_ID FROMDATA             TODATE               Booking Date Check                        Booking-Cabin Capacity Check       Bedrooms-Sleeping Capacity                 
+---------- -------------------- -------------------- ----------------------------------------- ---------------------------------- -------------------------------------------
+         1 01-Jun-2019          03-Jun-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         2 01-Jun-2019          07-Jun-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         3 06-Jun-2019          05-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         4 06-Nov-2019          08-Nov-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         5 07-Dec-2019          17-Dec-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         6 07-Jul-2019          18-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         7 14-Jul-2019          21-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         8 18-Jul-2019          20-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+         9 10-Jul-2019          27-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        10 22-Jul-2019          25-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        11 01-Jul-2019          04-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        12 16-Jul-2019          19-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        13 18-Jul-2019          22-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        14 03-Jul-2019          07-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        15 07-Aug-2019          10-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        16 10-Jul-2019          11-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        17 11-Jul-2019          17-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        18 13-Jul-2019          15-Jul-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        19 03-Aug-2019          06-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        20 08-Aug-2019          10-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        21 15-Aug-2019          18-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        22 17-Aug-2019          24-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        23 19-Aug-2019          22-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        24 18-Aug-2019          21-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        25 01-Aug-2019          05-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        26 07-Aug-2019          11-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        27 25-Aug-2019          30-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        28 01-Sep-2019          04-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        29 03-Sep-2019          04-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        30 18-Aug-2019          21-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        31 24-Aug-2019          28-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        32 14-Sep-2019          20-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        33 27-Aug-2019          03-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        34 22-Aug-2019          25-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        35 29-Aug-2019          30-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        36 04-Sep-2019          10-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        37 02-Oct-2019          10-Oct-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        38 10-Dec-2019          12-Dec-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        39 25-Aug-2019          29-Aug-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        40 28-Aug-2019          02-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        41 29-Aug-2019          03-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        42 05-Sep-2019          07-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        43 10-Sep-2019          20-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        44 20-Sep-2019          24-Sep-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        45 03-Oct-2019          09-Oct-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        46 07-Oct-2019          13-Oct-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        47 08-Dec-2019          10-Dec-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        48 03-Oct-2019          07-Oct-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        49 03-Nov-2019          05-Nov-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+        50 10-Nov-2019          14-Nov-2019          Dates OK                                  Capacity of cabin OK               Bedrooms/Sleeping capacity OK              
+
+50 rows selected. 
+
+SQL> -- Resort Details - check of start rating vs reviews added
+SQL> -------------------------------------------------------------------------------
+SQL> set echo off
+
+ RESORT_ID RESORT_NAME                                        RESORTTOWN                                             RESORTSTARRATING     REVIEWCALCAVERAGE   
+---------- -------------------------------------------------- ------------------------------------------------------ -------------------- --------------------
+         1 Byron Bay Exclusive Resort                         Byron Bay NSW                                           4.6                  4.6                
+         2 Amazing Resort                                     Echuca VIC                                              4.0                  4.0                
+         3 Alice Springs Resort                               Alice Springs NT                                        5.0                  5.0                
+         4 Broome Awesome Resort                              Broome WA                                               5.0                  5.0                
+         5 Byron Bay Super Resort                             Byron Bay NSW                                           3.0                  3.0                
+         6 Gympie Luxury Resort                               Gympie QLD                                             NULL                 NULL                
+         7 Taree Exclusive Resort                             Taree NSW                                               5.0                  5.0                
+         8 King Resort at Kingaroy                            Kingaroy QLD                                           NULL                 NULL                
+         9 Queen Resort                                       Mount Isa QLD                                           2.5                  2.5                
+        10 Mudgee Budget Resort                               Mudgee NSW                                             NULL                 NULL                
+
+10 rows selected. 
+
+SQL> ------------- Replace student data with marking data ------------------------------
+SQL> set echo off
+SQL> -------------- Data Replaced ------------------------------------------------------
+SQL> 
+SQL> ------------- Run student scripts --------------------------------------------------
+SQL> 
+SQL> set echo on
+SQL> ------------- Question 1b DML --------------------------------------------------
+SQL> 
+SQL> 
+SQL> @Q1b-mc-dm.sql
+SQL> /*
+SQL>(b) For the following tasks, your SQL must correctly manage transactions and use sequences to generate 
+SQL>new primary keys for numeric primary key values (under no circumstances may a new primary key value be 
+SQL>hard coded as a number or value). Your answers for these tasks must be placed in the supplied SQL Script 
+SQL>Q1b-mc-dm.sql
+SQL>*/
+SQL> 
+SQL> /*
+SQL>(i) Create a sequence which will allow entry of data into the RESORT table - the sequence must begin at 
+SQL>100 and go up in steps of 1 (i.e., the first value is 100, the next 101, etc.)
+SQL>[1 mark]
+SQL>*/
+SQL> CREATE SEQUENCE resort_seq START WITH 100 INCREMENT BY 1;
+
+Sequence RESORT_SEQ created.
+
+SQL> 
+SQL> 
+SQL> /*
+SQL>(ii) Monash Cabins is doing very good business these days because of a booming economy and their highly 
+SQL>competitive rates. They have now opened a new resort called Awesome Resort to catch up with the demand. 
+SQL>The details of the new resort to be added to the MC database are as follows:
+SQL>Street Address                    	: 50 Awesome Road
+SQL>Postcode                            : 4830
+SQL>Town Latitude                     	: -20.7256
+SQL>Town Longitude                  	: 139.4927
+SQL> 
+SQL>The manager of Awesome Resorts will be Garrott Gooch (Ph: 6002318099) who will not be a live in manager.                                                                                     	
+SQL> 
+SQL>To start with, there will only be two cabins at Awesome Resorts. The details of the two cabins are as follows:
+SQL>
+SQL>Cabin 1 Bedrooms                    : 3
+SQL>Cabin 1 Sleeping Capacity           : 6
+SQL>Cabin 1 Description                 : Free wi-Fi. kitchen with 400 ltr refrigerator, stove, microwave, pots, 
+SQL>                                      pans, silverware, toaster, electric kettle, TV and utensils
+SQL>Cabin 2 Bedrooms                    : 2
+SQL>Cabin 2 Sleeping Capacity           : 4
+SQL>Cabin 2 Description                 : Free wi-Fi. kitchen with 280 ltr refrigerator, stove, pots, pans, 
+SQL>                                    silverware, toaster, electric kettle, TV and utensils
+SQL>
+SQL>You should use appropriate new cabin numbers for this resort when adding the cabins to the MC database.
+SQL>[5 marks]
+SQL>*/
+SQL> INSERT INTO resort VALUES (
+  2      resort_seq.NEXTVAL,
+  3      'Awesome Resort',
+  4      '50 Awesome Road',
+  5      '4830',
+  6      NULL,
+  7      'N',
+  8      (
+  9          SELECT
+ 10              town_id
+ 11          FROM
+ 12              town
+ 13          WHERE
+ 14              town_lat = -20.7256
+ 15              AND   town_long = 139.4927
+ 16      ),
+ 17      (
+ 18          SELECT
+ 19              manager_id
+ 20          FROM
+ 21              manager
+ 22          WHERE
+ 23              manager_phone = '6002318099'
+ 24      )
+ 25  );
+
+1 row inserted.
+
+SQL> -- should not use Garrott Gooch in the SQL condition to get manager_id value, 
+SQL> -- name is not necessarily unique.
+SQL> 
+SQL> INSERT INTO cabin VALUES (
+  2      1,
+  3      resort_seq.CURRVAL,
+  4      3,
+  5      6,
+  6      'Free wi-Fi. kitchen with 400 ltr refrigerator, stove, microwave, pots, pans, silverware, toaster, electric kettle, TV and utensils.'
+  7  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO cabin VALUES (
+  2      2,
+  3      resort_seq.CURRVAL,
+  4      2,
+  5      4,
+  6      'Free wi-Fi. kitchen with 280 ltr refrigerator, stove, pots, pans, silverware, toaster, electric kettle, TV and utensils.'
+  7  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from resort order by resort_id;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              RESO RESORT_STAR_RATING R    TOWN_ID MANAGER_ID
+---------- -------------------------------------------------- -------------------------------------------------- ---- ------------------ - ---------- ----------
+         1 Byron Bay Exclusive Resort                         1 Karma Road                                       2481                4.6 Y          1          3
+         2 Amazing Resort                                     5B Lincoln Way                                     3564                  4 N          9          3
+         3 Alice Springs Resort                               1 Wonderland Road                                  0870                  5 N          5          1
+         4 Broome Awesome Resort                              1 Crystal Clear Road                               6725                  5 Y          6          1
+         5 Byron Bay Super Resort                             675 Lennon Street                                  2481                  3 N          1          3
+         6 Gympie Luxury Resort                               1234 Gympie Hwy                                    4570                    Y          4          5
+         7 Taree Exclusive Resort                             78 Station Road                                    2430                  5 Y          8          4
+         8 King Resort at Kingaroy                            23A Town Road                                      4610                    N          3          5
+         9 Queen Resort                                       45 Mount Isa Road                                  4825                2.5 N          7          5
+        10 Mudgee Budget Resort                               40 Moonlight Road                                  2850                    N          2          4
+       100 Awesome Resort                                     50 Awesome Road                                    4830                    N          7          5
+
+11 rows selected. 
+
+SQL> select * from cabin where resort_id = 100;
+
+  CABIN_NO  RESORT_ID CABIN_BEDROOMS CABIN_SLEEPING_CAPACITY CABIN_DESCRIPTION                                                                                                                                                                                                                                         
+---------- ---------- -------------- ----------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+         1        100              3                       6 Free wi-Fi. kitchen with 400 ltr refrigerator, stove, microwave, pots, pans, silverware, toaster, electric kettle, TV and utensils.                                                                                                                       
+         2        100              2                       4 Free wi-Fi. kitchen with 280 ltr refrigerator, stove, pots, pans, silverware, toaster, electric kettle, TV and utensils.                                                                                                                                  
+
+SQL> 
+SQL> /*
+SQL>(iii) A few weeks after opening the new resort, MC has decided to replace the manager. The new resident 
+SQL>manager of Awesome Resorts will be Fonsie Tillard (Ph: 9636535741).
+SQL>[2 marks]
+SQL>*/
+SQL> UPDATE resort
+  2      SET
+  3          resort_livein_manager = 'Y',
+  4          manager_id = (
+  5              SELECT
+  6                  manager_id
+  7              FROM
+  8                  manager
+  9              WHERE
+ 10                  manager_phone = '9636535741'
+ 11          )
+ 12  WHERE
+ 13      town_id = (
+ 14          SELECT
+ 15              town_id
+ 16          FROM
+ 17              town
+ 18          WHERE
+ 19              town_lat = -20.7256
+ 20              AND   town_long = 139.4927
+ 21      )
+ 22      AND   resort_name = 'Awesome Resort';
+
+1 row updated.
+
+SQL> -- should not use Fonsie Tillard in the SQL condition to get manager_id value,
+SQL> -- name is not necessarily unique.
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from resort where resort_id = 100;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              RESO RESORT_STAR_RATING R    TOWN_ID MANAGER_ID
+---------- -------------------------------------------------- -------------------------------------------------- ---- ------------------ - ---------- ----------
+       100 Awesome Resort                                     50 Awesome Road                                    4830                    Y          7          1
+
+SQL> 
+SQL> /*
+SQL>(iv) After several months, the newly opened resort hasn't had any bookings and MC has now decided to close 
+SQL>this resort. Remove this resort from the database. Note that more cabins may have been added to this resort 
+SQL>since it was opened.
+SQL>[2 marks]
+SQL>*/
+SQL> 
+SQL> -- Must use ONLY ONE DELETE statement for deleting *all* the cabins
+SQL> DELETE FROM cabin
+  2  WHERE
+  3      resort_id = (
+  4          SELECT
+  5              resort_id
+  6          FROM
+  7              resort
+  8          WHERE
+  9              resort_name = 'Awesome Resort'
+ 10              AND   town_id = (
+ 11                  SELECT
+ 12                      town_id
+ 13                  FROM
+ 14                      town
+ 15                  WHERE
+ 16                      town_lat = -20.7256
+ 17                      AND   town_long = 139.4927
+ 18              )
+ 19      );
+
+2 rows deleted.
+
+SQL> 
+SQL> DELETE FROM resort
+  2  WHERE
+  3      resort_name = 'Awesome Resort'
+  4      AND   town_id = (
+  5          SELECT
+  6              town_id
+  7          FROM
+  8              town
+  9          WHERE
+ 10              town_lat = -20.7256
+ 11              AND   town_long = 139.4927
+ 12      );
+
+1 row deleted.
+
+SQL> 
+SQL> -- Must have only one COMMIT statement, delete of cabins and resort is one transaction
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from resort order by resort_id;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              RESO RESORT_STAR_RATING R    TOWN_ID MANAGER_ID
+---------- -------------------------------------------------- -------------------------------------------------- ---- ------------------ - ---------- ----------
+         1 Byron Bay Exclusive Resort                         1 Karma Road                                       2481                4.6 Y          1          3
+         2 Amazing Resort                                     5B Lincoln Way                                     3564                  4 N          9          3
+         3 Alice Springs Resort                               1 Wonderland Road                                  0870                  5 N          5          1
+         4 Broome Awesome Resort                              1 Crystal Clear Road                               6725                  5 Y          6          1
+         5 Byron Bay Super Resort                             675 Lennon Street                                  2481                  3 N          1          3
+         6 Gympie Luxury Resort                               1234 Gympie Hwy                                    4570                    Y          4          5
+         7 Taree Exclusive Resort                             78 Station Road                                    2430                  5 Y          8          4
+         8 King Resort at Kingaroy                            23A Town Road                                      4610                    N          3          5
+         9 Queen Resort                                       45 Mount Isa Road                                  4825                2.5 N          7          5
+        10 Mudgee Budget Resort                               40 Moonlight Road                                  2850                    N          2          4
+
+10 rows selected. 
+
+SQL> select * from cabin where resort_id = 100;
+no rows selected
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      all_sequences
+  5  WHERE
+  6      sequence_owner = user;
+
+SEQUENCE_OWNER                 SEQUENCE_NAME                   MIN_VALUE  MAX_VALUE INCREMENT_BY C O CACHE_SIZE LAST_NUMBER
+------------------------------ ------------------------------ ---------- ---------- ------------ - - ---------- -----------
+LSMI1                          RESORT_SEQ                              1 1.0000E+28            1 N N         20         120
+
+SQL> 
+SQL> set echo on
+SQL> ------------- Question 2 Queries -----------------------------------------------
+SQL> ---- Note: max of 50% of grade if no rows returned -----------------------------
+SQL> @Q2-mc-queries.sql
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> -- Q2. SQL Queries (40 marks)
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> /*
+SQL>(i) Show the resort and managers details for those resorts which do not currently have a resort star
+SQL>rating and which have a live in manager. The output must list the resort name, the resort address as
+SQL>a single column called  'RESORT ADDRESS' (made up of  street address, town name and post code), the
+SQL>managers name and the managers phone number. The output must be ordered by resort postcode descending,
+SQL>where two resorts are in the same post code order them by the resort name. Your output must have the
+SQL>form shown below (your data will clearly be different). [4 marks]
+SQL>*/
+SQL> SELECT
+  2             r.resort_name
+  3           , r.resort_street_address
+  4                        || ' '
+  5                        || t.town_name
+  6                        || ' '
+  7                        || r.resort_pcode AS "RESORT ADDRESS"
+  8           , m.manager_name
+  9           , m.manager_phone
+ 10  FROM
+ 11             resort r
+ 12             INNER JOIN
+ 13                        town t
+ 14                        ON
+ 15                                   t.town_id = r.town_id
+ 16             INNER JOIN
+ 17                        manager m
+ 18                        ON
+ 19                                   r.manager_id = m.manager_id
+ 20  WHERE
+ 21             r.resort_star_rating IS NULL
+ 22             AND resort_livein_manager  = 'Y'
+ 23  ORDER BY
+ 24             r.resort_pcode DESC
+ 25           , r.resort_name
+ 26  ;
+
+RESORT_NAME                                        RESORT ADDRESS                                                                                             MANAGER_NAME                                       MANAGER_PHONE  
+-------------------------------------------------- ---------------------------------------------------------------------------------------------------------- -------------------------------------------------- ---------------
+Gympie Luxury Resort                               1234 Gympie Hwy Gympie 4570                                                                                Garrott Gooch                                      6002318099     
+
+SQL> 
+SQL> /*
+SQL>(ii) Show those resorts which have charged more in booking charges than the average booking charge
+SQL>made by all resorts. The output must list the resort id, resort name, resort street address, resort
+SQL>town, resort state, resort postcode and total booking charges in a column called "total_booking_charges'.
+SQL>The output must be ordered by resort_id. Your output must have the form shown below (your data will
+SQL>clearly be different). [6 marks]
+SQL>*/
+SQL> SELECT
+  2             resort.resort_id
+  3           , resort.resort_name
+  4           , resort.resort_street_address
+  5           , town.town_name
+  6           , town.town_state
+  7           , resort.resort_pcode
+  8           , to_char(SUM(booking.booking_charge), '$999999.99') AS "TOTAL_BOOKING_CHARGES"
+  9  FROM
+ 10             resort
+ 11             INNER JOIN
+ 12                        booking
+ 13                        ON
+ 14                                   resort.resort_id = booking.resort_id
+ 15             INNER JOIN
+ 16                        town
+ 17                        ON
+ 18                                   resort.town_id = town.town_id
+ 19  GROUP BY
+ 20             resort.resort_id
+ 21           , resort.resort_name
+ 22           , resort.resort_street_address
+ 23           , town.town_name
+ 24           , town.town_state
+ 25           , resort.resort_pcode
+ 26  HAVING
+ 27             SUM(booking.booking_charge) >
+ 28             (
+ 29                      SELECT
+ 30                               AVG(SUM(booking_charge))
+ 31                      FROM
+ 32                               booking
+ 33                      GROUP BY
+ 34                               resort_id
+ 35             )
+ 36  ORDER BY
+ 37             resort_id
+ 38  ;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              TOWN_NAME                                          TOW RESO TOTAL_BOOKI
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --- ---- -----------
+         1 Byron Bay Exclusive Resort                         1 Karma Road                                       Byron Bay                                          NSW 2481    $9396.07
+         2 Amazing Resort                                     5B Lincoln Way                                     Echuca                                             VIC 3564    $4920.24
+         3 Alice Springs Resort                               1 Wonderland Road                                  Alice Springs                                      NT  0870    $4885.48
+         5 Byron Bay Super Resort                             675 Lennon Street                                  Byron Bay                                          NSW 2481    $4593.21
+
+SQL> 
+SQL> /*
+SQL>(iii) Reviews which are provided by guests were intended to be a review by a guest who has completed
+SQL>their stay at the resort (ie. the review is entered after they have left the resort). Unfortunately,
+SQL>the current Monash Cabins system allows guests, once registered  in the system, to add a review for a
+SQL>resort even if they have not stayed at the resort (they may have a future booking or may not even have
+SQL>a booking for the resort they are rating with their review). To assess the issues with the current review
+SQL>data provide a list of all invalid reviews (ie. reviews made by a guest who has not completed their stay
+SQL>at the resort they are reviewing or a guest who does not have any booking for the resort they are reviewing). The output should list the review id, guest no and name, resort id and name, review comment and the date the review was completed. The output must be in ascending  date reviewed order. Your output must have the form shown below (your data will clearly be different).
+SQL>In arriving at your solution you may assume that there have been no booking cancellations and that no
+SQL>guest left the resort before their booking to date. [6 marks]
+SQL>*/
+SQL> SELECT
+  2             v.review_id
+  3           , g.guest_no
+  4           , g.guest_name
+  5           , r.resort_id
+  6           , r.resort_name
+  7           , v.review_comment
+  8           , to_char(v.review_date, 'DD-Mon-yyyy') as date_reviewed
+  9  FROM
+ 10             review v
+ 11             INNER JOIN
+ 12                        guest g
+ 13                        ON
+ 14                                   g.guest_no = v.guest_no
+ 15             INNER JOIN
+ 16                        resort r
+ 17                        ON
+ 18                                   r.resort_id = v.resort_id
+ 19  WHERE
+ 20             (
+ 21                        g.guest_no
+ 22                      , r.resort_id
+ 23             )
+ 24             NOT IN
+ 25             (
+ 26                        SELECT DISTINCT
+ 27                                   b.guest_no
+ 28                                 , b.resort_id
+ 29                        FROM
+ 30                                   guest g
+ 31                                   INNER JOIN
+ 32                                              booking b
+ 33                                              ON
+ 34                                                         g.guest_no = b.guest_no
+ 35                        WHERE
+ 36                                   --b.booking_to < sysdate
+ 37                                   review_date >= booking_to
+ 38             )
+ 39  ORDER BY
+ 40             v.review_date
+ 41  ;
+
+ REVIEW_ID   GUEST_NO GUEST_NAME                                          RESORT_ID RESORT_NAME
+---------- ---------- -------------------------------------------------- ---------- --------------------------------------------------
+REVIEW_COMMENT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       DATE_REVIEWED       
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------
+         8          1 Martin Garnam                                               9 Queen Resort                                       
+will not come back!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  15-Sep-2019         
+
+         9         10 Beau Waterfield                                             1 Byron Bay Exclusive Resort                         
+Excellent service!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   01-Oct-2019         
+
+        11          4 Ase Heugel                                                  9 Queen Resort                                       
+not a good experience!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               02-Oct-2019         
+
+        13          4 Ase Heugel                                                  7 Taree Exclusive Resort                             
+clean rooms and great kitchen. :-)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   03-Oct-2019         
+
+        15          9 Laurens Burnhams                                            1 Byron Bay Exclusive Resort                         
+Enjoyed the stay!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    03-Oct-2019         
+
+        14         10 Beau Waterfield                                             9 Queen Resort                                       
+Stay was OK only.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    03-Oct-2019         
+
+
+6 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>(iv) Show the total number of cabins at those resorts which have cabins with more than two bedrooms and
+SQL>indicate how many cabins at the resort have more than two bedrooms.
+SQL>The output must include the resort id, the resort name and the accommodation details in the format as
+SQL>indicated below (your data will clearly be different). The output must be in resort name order. [6 marks]
+SQL>*/
+SQL> SELECT
+  2             r.resort_id
+  3           , resort_name
+  4           , 'Has '
+  5                        || to_char(COUNT(*),'99')
+  6                        || ' cabins in total with '
+  7                        ||
+  8             (
+  9                    SELECT
+ 10                           to_char(COUNT(*),'99')
+ 11                    FROM
+ 12                           cabin
+ 13                    WHERE
+ 14                           resort_id          = r.resort_id
+ 15                           AND cabin_bedrooms > 2
+ 16             )
+ 17                        || ' having more than 2 bedrooms' AS accommodation_available
+ 18  FROM
+ 19             cabin c
+ 20             INNER JOIN
+ 21                        resort r
+ 22                        ON
+ 23                                   c.resort_id = r.resort_id
+ 24  GROUP BY
+ 25             r.resort_id
+ 26           , resort_name
+ 27  HAVING
+ 28             MAX(cabin_bedrooms) > 2
+ 29  ORDER BY
+ 30             resort_name
+ 31  ;
+
+ RESORT_ID RESORT_NAME                                        ACCOMMODATION_AVAILABLE                                     
+---------- -------------------------------------------------- ------------------------------------------------------------
+         1 Byron Bay Exclusive Resort                         Has  14 cabins in total with   5 having more than 2 bedrooms
+         5 Byron Bay Super Resort                             Has  10 cabins in total with   3 having more than 2 bedrooms
+         6 Gympie Luxury Resort                               Has   4 cabins in total with   1 having more than 2 bedrooms
+         8 King Resort at Kingaroy                            Has   7 cabins in total with   2 having more than 2 bedrooms
+        10 Mudgee Budget Resort                               Has   3 cabins in total with   1 having more than 2 bedrooms
+         7 Taree Exclusive Resort                             Has   4 cabins in total with   1 having more than 2 bedrooms
+
+6 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>(v) Show the most popular resort(s) based on the number of bookings for a resort.
+SQL>For the most popular resort(s) list the resort id, resort name, if the resort has a live in manager
+SQL>display 'Yes', if not 'No' in a column headed 'live_in_manager', the resorts star rating (if the resort
+SQL>has no ratings show 'No Ratings'), the managers name and phone number and the count of bookings which are
+SQL>in the system for the resort. The output must be ordered by the resort id.Your output must have the form
+SQL>shown below (your data will clearly be different). [8 marks]
+SQL>*/
+SQL> SELECT
+  2             r.resort_id
+  3           , r.resort_name
+  4           , CASE r.resort_livein_manager
+  5                        WHEN 'Y'
+  6                                   THEN 'Yes'
+  7                        WHEN 'N'
+  8                                   THEN 'No'
+  9             END                                                     AS live_in_manager
+ 10           , nvl(to_char(r.resort_star_rating, '9.9'), 'No Ratings') AS star_rating
+ 11           , m.manager_name
+ 12           , m.manager_phone
+ 13           , COUNT(b.booking_id) AS Number_of_bookings
+ 14  FROM
+ 15             resort r
+ 16             INNER JOIN
+ 17                        booking b
+ 18                        ON
+ 19                                   b.resort_id = r.resort_id
+ 20             INNER JOIN
+ 21                        manager m
+ 22                        ON
+ 23                                   m.manager_id = r.manager_id
+ 24  GROUP BY
+ 25             r.resort_id
+ 26           , r.resort_name
+ 27           , r.resort_livein_manager
+ 28           , r.resort_star_rating
+ 29           , m.manager_name
+ 30           , m.manager_phone
+ 31  HAVING
+ 32             COUNT(b.booking_id) =
+ 33             (
+ 34                      SELECT
+ 35                               MAX(COUNT(b.booking_id))
+ 36                      FROM
+ 37                               booking b
+ 38                      GROUP BY
+ 39                               b.resort_id
+ 40             )
+ 41  ORDER BY
+ 42             r.resort_id
+ 43  ;
+
+ RESORT_ID RESORT_NAME                                        LIV STAR_RATIN MANAGER_NAME                                       MANAGER_PHONE   NUMBER_OF_BOOKINGS
+---------- -------------------------------------------------- --- ---------- -------------------------------------------------- --------------- ------------------
+         1 Byron Bay Exclusive Resort                         Yes  4.6       Lowrance Sellman                                   1378452642                      10
+
+SQL> 
+SQL> /*
+SQL>(vi) Based on the Town and POI data you have been supplied with, Monash Cabins would like to create a list
+SQL>of points of interest (poi's) close to their various resorts to help guests who would like to tour the local
+SQL>area.
+SQL>The output must show the resort id, resort name and for each point of interest within 100 Km straight
+SQL>line distance of the resort; the poi name, poi street address, poi town, poi state, poi opening time and
+SQL>the straight line distance to the POI in a column called 'SEPARATION_IN_KMS'. Within 100 Km  is inclusive
+SQL>(ie 100 Km from the resort or less). The output must be ordered by the resort name and for a given resort
+SQL>by the separation in kms.
+SQL>Your output must have the form shown below (your data will clearly be different). [10 marks]
+SQL>*/
+SQL> SELECT
+  2           resort_id
+  3         , resort_name
+  4         , poi_name
+  5         , poi_street_address
+  6         , tp.town_name                                                                        AS poi_town
+  7         , tp.town_state                                                                       AS poi_state
+  8         , nvl(to_char(poi_open_time, 'hh:mi am'), 'Not Applicable')                           AS poi_opening_time
+  9         , to_char(geodistance(tp.town_lat, tp.town_long, tr.town_lat, tr.town_long), '990.9') AS separation_in_kms
+ 10  FROM
+ 11           town tp
+ 12           JOIN
+ 13                    point_of_interest poi
+ 14                    ON
+ 15                             tp.town_id = poi.town_id
+ 16           JOIN
+ 17                    ( resort r
+ 18                    JOIN
+ 19                             town tr
+ 20                             ON
+ 21                                      r.town_id = tr.town_id )
+ 22                    ON
+ 23                             geodistance(tr.town_lat, tr.town_long, tp.town_lat, tp.town_long) <= 100
+ 24  ORDER BY
+ 25           resort_name
+ 26         , separation_in_kms
+ 27  ;
+
+ RESORT_ID RESORT_NAME                                        POI_NAME                                           POI_STREET_ADDRESS                                 POI_TOWN                                           POI POI_OPENING_TI SEPARA
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --- -------------- ------
+         3 Alice Springs Resort                               Tanami Desert - NT                                 Tanami Desert located in NT (and WA)               Alice Springs                                      NT  Not Applicable    0.0
+         3 Alice Springs Resort                               Alice Springs Desert Park                          871 Larapinta Dr                                   Alice Springs                                      NT  07:30 AM          0.0
+         3 Alice Springs Resort                               Adelaide House                                     48 Todd St                                         Alice Springs                                      NT  10:00 AM          0.0
+         3 Alice Springs Resort                               Anzac Hill                                         Anzac Hill Rd                                      Alice Springs                                      NT  Not Applicable    0.0
+         3 Alice Springs Resort                               Alice Springs Telegraph Station Historical Reserve Herbert Heritage Dr                                Stuart                                             NT  08:00 AM          2.4
+         4 Broome Awesome Resort                              Captain Gregory’s House                            Corner Hamersley and Carnarvon St.                 Broome                                             WA  09:00 AM          0.0
+         4 Broome Awesome Resort                              Broome Historical Museum                           67 Robinson St                                     Broome                                             WA  10:00 AM          0.0
+         4 Broome Awesome Resort                              Sun Picture Gardens                                27 Carnarvon St                                    Broome                                             WA  06:00 PM          0.0
+         1 Byron Bay Exclusive Resort                         Cape Byron Lighthouse                              Cape Byron Walking Track                           Byron Bay                                          NSW 08:00 AM          0.0
+         1 Byron Bay Exclusive Resort                         Arakwal National Park                              Byron Bay                                          Byron Bay                                          NSW Not Applicable    0.0
+         1 Byron Bay Exclusive Resort                         Julian Rocks Nguthungulli Nature Reserve           Tallow Beach Rd                                    Byron Bay                                          NSW Not Applicable    0.0
+         1 Byron Bay Exclusive Resort                         Broken Head Nature Reserve                         Seven Mile Beach Rd                                Byron Bay                                          NSW Not Applicable    0.0
+         5 Byron Bay Super Resort                             Julian Rocks Nguthungulli Nature Reserve           Tallow Beach Rd                                    Byron Bay                                          NSW Not Applicable    0.0
+         5 Byron Bay Super Resort                             Arakwal National Park                              Byron Bay                                          Byron Bay                                          NSW Not Applicable    0.0
+         5 Byron Bay Super Resort                             Cape Byron Lighthouse                              Cape Byron Walking Track                           Byron Bay                                          NSW 08:00 AM          0.0
+         5 Byron Bay Super Resort                             Broken Head Nature Reserve                         Seven Mile Beach Rd                                Byron Bay                                          NSW Not Applicable    0.0
+         6 Gympie Luxury Resort                               Gympie Gold Mining and Historical Museum           215 Brisbane Rd                                    Gympie                                             QLD 09:00 AM          0.0
+         6 Gympie Luxury Resort                               Woondum National Park                              281 Hill Rd                                        Mothar Mountain                                    QLD Not Applicable   12.4
+         6 Gympie Luxury Resort                               Kingaroy Heritage Museum                           124 Haly St                                        Kingaroy                                           QLD 09:00 AM         90.9
+         6 Gympie Luxury Resort                               Kingaroy Observatory                               45 Geoff Raph Dr                                   Taabinga                                           QLD 07:00 AM         95.0
+         8 King Resort at Kingaroy                            Kingaroy Heritage Museum                           124 Haly St                                        Kingaroy                                           QLD 09:00 AM          0.0
+         8 King Resort at Kingaroy                            Kingaroy Observatory                               45 Geoff Raph Dr                                   Taabinga                                           QLD 07:00 AM          7.1
+         8 King Resort at Kingaroy                            Bunya Mountains National Park                      Bunya Mountains Rd                                 Bunya Mountains                                    QLD Not Applicable   46.1
+         8 King Resort at Kingaroy                            Gympie Gold Mining and Historical Museum           215 Brisbane Rd                                    Gympie                                             QLD 09:00 AM         90.9
+         8 King Resort at Kingaroy                            Woondum National Park                              281 Hill Rd                                        Mothar Mountain                                    QLD Not Applicable   97.6
+        10 Mudgee Budget Resort                               Lawson Park                                        Corner Short and Church Street                     Mudgee                                             NSW Not Applicable    0.0
+        10 Mudgee Budget Resort                               Colonial Inn Museum                                126 Market St                                      Mudgee                                             NSW 10:00 AM          0.0
+        10 Mudgee Budget Resort                               Mudgee Railway Station                             21 Inglis Street                                   Mudgee                                             NSW 09:00 AM          0.0
+         9 Queen Resort                                       Mount Isa Underground Hospital and Museum          Joan St                                            Mornington                                         QLD 10:00 AM          1.1
+         7 Taree Exclusive Resort                             Fotheringham Park                                  221 Victoria Street                                Taree                                              NSW Not Applicable    0.0
+         7 Taree Exclusive Resort                             Taree Court House                                  85 Albert St                                       Taree                                              NSW 09:00 AM          0.0
+
+31 rows selected. 
+
+SQL> 
+SQL> set echo on
+SQL> ------------- Question 3 PL/SQL ------------------------------------------------
+SQL> @Q3-mc-mods.sql
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> -- Q3. Design Modifications (20 marks)
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> /*
+SQL>Your answers for these tasks must be placed in the supplied SQL Script Q3-mc-mods.sql
+SQL>
+SQL>These tasks should be attempted only after Q1 and Q2 have been successfully completed. They are to be 
+SQL>completed on the "live" database ie. the database with the data loaded from your previous work. For this 
+SQL>question you must not make use of any PL/SQL
+SQL>*/
+SQL> 
+SQL> /*
+SQL>(i) Monash Cabins would like to add an attribute to the booking table which they can use to flag the state 
+SQL>of a booking - this attribute will have a value of either (C, D, F or P) where these mean:
+SQL>
+SQL>C - Completed Booking, guest has completed their stay and left the resort 
+SQL>D - Booking has been cancelled
+SQL>F - Future Booking
+SQL>P - Guest is on the resort premises (ie currently staying at the resort) 
+SQL>
+SQL>This attribute must be initialised based on the data which is currently stored in the system. You may 
+SQL>assume that none of the current booking entries represent cancelled bookings. All new bookings after 
+SQL>implementing this requirement must automatically be assigned a value of 'F'.
+SQL>[6 marks]
+SQL>*/
+SQL> ALTER TABLE booking ADD (
+  2      booking_state   CHAR(1) DEFAULT 'F'
+  3          CONSTRAINT booking_state_chk CHECK ( booking_state IN (
+  4              'C',
+  5              'D',
+  6              'F',
+  7              'P'
+  8          ) )
+  9  );
+
+Table BOOKING altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN booking.booking_state IS
+  2      'Booking State';
+
+Comment created.
+
+SQL> 
+SQL> 
+SQL> -- Should not have UPDATE statement for code D (cancelled) as no cancellations have been made
+SQL> -- nor code F (future) set up as default.
+SQL> UPDATE booking
+  2      SET
+  3          booking_state = 'C'
+  4  WHERE
+  5      booking_to < SYSDATE;
+
+45 rows updated.
+
+SQL> 
+SQL> UPDATE booking
+  2      SET
+  3          booking_state = 'P'
+  4  WHERE
+  5      SYSDATE BETWEEN booking_from AND booking_to;
+
+1 row updated.
+
+SQL> 
+SQL> /*
+SQL>--OR USE CASE STATEMENT INSTEAD OF ABOVE 2 UPDATE STATEMENTS
+SQL>
+SQL>UPDATE booking
+SQL>    SET
+SQL>        booking_state = (
+SQL>            CASE
+SQL>                WHEN booking_to < SYSDATE                      THEN 'C'
+SQL>                WHEN SYSDATE BETWEEN booking_from AND booking_to THEN 'P'
+SQL>            END
+SQL>        );
+SQL>*/
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> ALTER TABLE booking MODIFY
+  2      booking_state NOT NULL;
+
+Table BOOKING altered.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from booking order by booking_id;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+50 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>(ii) Monash Cabins would like to be able to easily determine the number of completed bookings any particular
+SQL>guest has had with the company. A completed booking is one in which the guest has booked and stayed at an MC
+SQL>resort and the stay is over, as listed in (i) above.  
+SQL>
+SQL>Add a new attribute which will record the number of completed bookings a guest has had with the company. 
+SQL>
+SQL>This attribute must be initialised to the correct current number of completed stays based on the data which 
+SQL>is currently stored in the system.
+SQL>[6 marks]
+SQL>*/
+SQL> --APPROACH 1
+SQL> --alter table guest drop column guest_bookings;
+SQL> ALTER TABLE guest ADD (
+  2      guest_bookings   NUMBER(5)
+  3  );
+
+Table GUEST altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN guest.guest_bookings IS
+  2      'Guest Bookings';
+
+Comment created.
+
+SQL> 
+SQL> UPDATE guest g
+  2      SET
+  3          guest_bookings = (
+  4              SELECT
+  5                  COUNT(*) AS total_book
+  6              FROM
+  7                  booking
+  8              WHERE
+  9                  guest_no = g.guest_no
+ 10                  AND   booking_to < SYSDATE
+ 11          );
+
+10 rows updated.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> 
+SQL> ALTER TABLE guest MODIFY
+  2      guest_bookings DEFAULT 0 NOT NULL;
+
+Table GUEST altered.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from guest order by guest_no;
+
+  GUEST_NO GUEST_NAME                                         GUEST_ADDRESS                                      GUEST_EMAIL                                        GUEST_PHONE          GUEST_BOOKINGS
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------- --------------
+         1 Martin Garnam                                      24928 Fairview Place, Sycamore, WA, Australia      mgarnam0@ox.ac.uk                                  5859375724                        3
+         2 Emmalyn Yaldren                                    8 Di Loreto Parkway, Eagle Crest, IL, USA          eyaldren1@icio.us                                  8158203770                        4
+         3 Justin Parkhouse                                   1639 East Terrace, Manley, NY, USA                 jparkhouse2@wp.com                                 2125512520                        6
+         4 Ase Heugel                                         4307 Calypso Place, Jana, NSW Australia            aheugel3@aol.com                                   5678225964                        4
+         5 Lorna Tumber                                       946 Alpine Terrace, Arapahoe, Surrey, England      ltumber4@berkeley.edu                              3123544712                        7
+         6 Wood Langelaan                                     1882 Eliot Way, Gillam, BC, Canada                 wlangelaan5@about.me                               1215971485                        6
+         7 Edna Windus                                        0472 Dottie Way, Sunfield, VIC, Australia          ewindus6@plala.or.jp                               3471322188                        3
+         8 Thibaut Fownes                                     756 Lotheville Alley, Kinsman, NT, Australia       tfownes7@deliciousdays.com                         2121265102                        3
+         9 Laurens Burnhams                                   505 East Parkway, Hoard, NSW, Australia            lburnhams8@opera.com                               2171718523                        5
+        10 Beau Waterfield                                    696 Golf View Avenue, NYC, NY, USA                 bwaterfield9@mtv.com                               9172358341                        4
+
+10 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>--APPROACH 2
+SQL>--alter table guest drop column guest_bookings;
+SQL>ALTER TABLE guest ADD (
+SQL>    guest_bookings   NUMBER(5) DEFAULT 0 NOT NULL
+SQL>);
+SQL>
+SQL>UPDATE guest g
+SQL>    SET
+SQL>        guest_bookings = (
+SQL>            SELECT
+SQL>                COUNT(*) AS total_book
+SQL>            FROM
+SQL>                booking
+SQL>            WHERE
+SQL>                guest_no = g.guest_no
+SQL>                AND   booking_state = 'C'
+SQL>        );
+SQL>        
+SQL>
+SQL>COMMIT; 
+SQL>*/
+SQL> 
+SQL> 
+SQL> /*
+SQL>(iii) Monash Cabins has found that having a single manager for each resort is causing problems for the 
+SQL>larger popular resorts. As a consequence they have decided to appoint multiple managers to a resort, where 
+SQL>necessary. 
+SQL>
+SQL>Where multiple managers are assigned, the company wishes to designate a role for each of the different 
+SQL>managers such as Bookings Manager (BM), Cleaning Manager (CM) and Maintenance Manager (MM) - this range of 
+SQL>manager roles will be added to as the need arises and is intended to be able to be changed easily. Each role
+SQL>code will have exactly 2 letters.
+SQL>
+SQL>Where a resort has only a single manager a role will not be assigned.
+SQL>
+SQL>The popular resort(s) that will require more than manager is only one at this stage which is Byron Bay 
+SQL>Exclusive Resort with town latitude: 28.6474 and town longitude: 153.6020. This resort will have the current
+SQL>manager manage bookings and Garrott Gooch (Ph: 6002318099) will manage cleaning and Fonsie Tillard 
+SQL>(Ph: 9636535741) will manage maintenance.
+SQL>
+SQL>Change the database to satisfy this requirement. Note: You should aim to use as few DDL and DML statements 
+SQL>as possible to achieve this requirement.
+SQL>[8 marks]
+SQL>*/
+SQL> DROP TABLE resort_manager PURGE;
+
+Error starting at line : 161 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q3-mc-mods.sql
+In command -
+DROP TABLE resort_manager PURGE
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> -- Inefficient to place live-in manager in RESORT_MANAGER will generate more nulls
+SQL> CREATE TABLE resort_manager
+  2      AS
+  3          SELECT
+  4              resort_id,
+  5              manager_id
+  6          FROM
+  7              resort;
+
+Table RESORT_MANAGER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN resort_manager.resort_id IS
+  2      'Resort ID ';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN resort_manager.manager_id IS
+  2      'Manager ID';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE resort_manager ADD (
+  2      role_id CHAR(2)
+  3  );
+
+Table RESORT_MANAGER altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN resort_manager.role_id IS
+  2      'Type of Role';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE resort_manager ADD CONSTRAINT resort_manager_pk PRIMARY KEY ( resort_id,
+  2  manager_id );
+
+Table RESORT_MANAGER altered.
+
+SQL> 
+SQL> 
+SQL> DROP TABLE role PURGE;
+
+Error starting at line : 189 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q3-mc-mods.sql
+In command -
+DROP TABLE role PURGE
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> CREATE TABLE role (
+  2      role_id     CHAR(2),
+  3      role_name   VARCHAR(20)  NOT NULL
+  4  );
+
+Table ROLE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN role.role_id IS
+  2      'Type of Role';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN role.role_name IS
+  2      'Role Name';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE role ADD CONSTRAINT role_pk PRIMARY KEY ( role_id);
+
+Table ROLE altered.
+
+SQL> 
+SQL> INSERT INTO role VALUES (
+  2      'BM',
+  3      'Bookings Manager'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO role VALUES (
+  2      'CM',
+  3      'Cleaning Manager'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO role VALUES (
+  2      'MM',
+  3      'Maintenance Manager'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> ALTER TABLE resort_manager
+  2      ADD CONSTRAINT resort_manager_resort_fk FOREIGN KEY ( resort_id )
+  3          REFERENCES resort ( resort_id );
+
+Table RESORT_MANAGER altered.
+
+SQL> 
+SQL> ALTER TABLE resort_manager
+  2      ADD CONSTRAINT resort_manager_manager_fk FOREIGN KEY ( manager_id )
+  3          REFERENCES manager ( manager_id );
+
+Table RESORT_MANAGER altered.
+
+SQL> 
+SQL> ALTER TABLE resort_manager
+  2      ADD CONSTRAINT resort_manager_role_fk FOREIGN KEY ( role_id )
+  3          REFERENCES role ( role_id );
+
+Table RESORT_MANAGER altered.
+
+SQL> 
+SQL> 
+SQL> UPDATE resort_manager
+  2      SET
+  3          role_id = 'BM'
+  4  WHERE
+  5      resort_id = (
+  6          SELECT
+  7              resort_id
+  8          FROM
+  9              resort
+ 10          WHERE
+ 11              resort_name = 'Byron Bay Exclusive Resort'
+ 12              AND   town_id = (
+ 13                  SELECT
+ 14                      town_id
+ 15                  FROM
+ 16                      town
+ 17                  WHERE
+ 18                      town_lat = -28.6474
+ 19                      AND   town_long = 153.6020
+ 20              )
+ 21      );
+
+1 row updated.
+
+SQL> 
+SQL> 
+SQL> INSERT INTO resort_manager VALUES (
+  2      (
+  3          SELECT
+  4              resort_id
+  5          FROM
+  6              resort
+  7          WHERE
+  8              resort_name = 'Byron Bay Exclusive Resort'
+  9              AND   town_id = (
+ 10                  SELECT
+ 11                      town_id
+ 12                  FROM
+ 13                      town
+ 14                  WHERE
+ 15                      town_lat = -28.6474
+ 16                      AND   town_long = 153.6020
+ 17              )
+ 18      ),
+ 19      (
+ 20          SELECT
+ 21              manager_id
+ 22          FROM
+ 23              manager
+ 24          WHERE
+ 25              manager_phone = '6002318099'
+ 26      ),
+ 27      'CM'
+ 28  );
+
+1 row inserted.
+
+SQL> 
+SQL> 
+SQL> INSERT INTO resort_manager VALUES (
+  2      (
+  3          SELECT
+  4              resort_id
+  5          FROM
+  6              resort
+  7          WHERE
+  8              resort_name = 'Byron Bay Exclusive Resort'
+  9              AND   town_id = (
+ 10                  SELECT
+ 11                      town_id
+ 12                  FROM
+ 13                      town
+ 14                  WHERE
+ 15                      town_lat = -28.6474
+ 16                      AND   town_long = 153.6020
+ 17              )
+ 18      ),
+ 19      (
+ 20          SELECT
+ 21              manager_id
+ 22          FROM
+ 23              manager
+ 24          WHERE
+ 25              manager_phone = '9636535741'
+ 26      ),
+ 27      'MM'
+ 28  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> 
+SQL> -- No need to DROP COLUMN manager_id from RESORT, re-used to record the live-in manager
+SQL> -- Recording of live in manager id in resort table
+SQL> alter table resort modify (manager_id null);
+
+Table RESORT altered.
+
+SQL> 
+SQL> update resort set manager_id = null where RESORT_LIVEIN_MANAGER = 'N';
+
+6 rows updated.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> alter table resort drop column resort_livein_manager;
+
+Table RESORT altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN resort.manager_id IS
+  2      'Live in Manager identifier';
+
+Comment created.
+
+SQL> 
+SQL> -- To demonstrate outcome, not required as part of solution
+SQL> select * from resort order by resort_id;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              RESO RESORT_STAR_RATING    TOWN_ID MANAGER_ID
+---------- -------------------------------------------------- -------------------------------------------------- ---- ------------------ ---------- ----------
+         1 Byron Bay Exclusive Resort                         1 Karma Road                                       2481                4.6          1          3
+         2 Amazing Resort                                     5B Lincoln Way                                     3564                  4          9           
+         3 Alice Springs Resort                               1 Wonderland Road                                  0870                  5          5           
+         4 Broome Awesome Resort                              1 Crystal Clear Road                               6725                  5          6          1
+         5 Byron Bay Super Resort                             675 Lennon Street                                  2481                  3          1           
+         6 Gympie Luxury Resort                               1234 Gympie Hwy                                    4570                             4          5
+         7 Taree Exclusive Resort                             78 Station Road                                    2430                  5          8          4
+         8 King Resort at Kingaroy                            23A Town Road                                      4610                             3           
+         9 Queen Resort                                       45 Mount Isa Road                                  4825                2.5          7           
+        10 Mudgee Budget Resort                               40 Moonlight Road                                  2850                             2           
+
+10 rows selected. 
+
+SQL> select * from resort_manager order by resort_id, manager_id;
+
+ RESORT_ID MANAGER_ID RO
+---------- ---------- --
+         1          1 MM
+         1          3 BM
+         1          5 CM
+         2          3   
+         3          1   
+         4          1   
+         5          3   
+         6          5   
+         7          4   
+         8          5   
+         9          5   
+        10          4   
+
+12 rows selected. 
+
+SQL> 
+SQL> set echo on
+SQL> 
+SQL> --======================== START CHECK Q3 OUTPUT ====================================---
+SQL> --Q3(i) result -> show booking table
+SQL> select * from booking;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+50 rows selected. 
+
+SQL> --Q3(ii) result -> show guest table
+SQL> select * from guest;
+
+  GUEST_NO GUEST_NAME                                         GUEST_ADDRESS                                      GUEST_EMAIL                                        GUEST_PHONE          GUEST_BOOKINGS
+---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------- --------------
+         1 Martin Garnam                                      24928 Fairview Place, Sycamore, WA, Australia      mgarnam0@ox.ac.uk                                  5859375724                        3
+         2 Emmalyn Yaldren                                    8 Di Loreto Parkway, Eagle Crest, IL, USA          eyaldren1@icio.us                                  8158203770                        4
+         3 Justin Parkhouse                                   1639 East Terrace, Manley, NY, USA                 jparkhouse2@wp.com                                 2125512520                        6
+         4 Ase Heugel                                         4307 Calypso Place, Jana, NSW Australia            aheugel3@aol.com                                   5678225964                        4
+         5 Lorna Tumber                                       946 Alpine Terrace, Arapahoe, Surrey, England      ltumber4@berkeley.edu                              3123544712                        7
+         6 Wood Langelaan                                     1882 Eliot Way, Gillam, BC, Canada                 wlangelaan5@about.me                               1215971485                        6
+         7 Edna Windus                                        0472 Dottie Way, Sunfield, VIC, Australia          ewindus6@plala.or.jp                               3471322188                        3
+         8 Thibaut Fownes                                     756 Lotheville Alley, Kinsman, NT, Australia       tfownes7@deliciousdays.com                         2121265102                        3
+         9 Laurens Burnhams                                   505 East Parkway, Hoard, NSW, Australia            lburnhams8@opera.com                               2171718523                        5
+        10 Beau Waterfield                                    696 Golf View Avenue, NYC, NY, USA                 bwaterfield9@mtv.com                               9172358341                        4
+
+10 rows selected. 
+
+SQL> --Q3(iii) result -> show resort table
+SQL> select * from resort;
+
+ RESORT_ID RESORT_NAME                                        RESORT_STREET_ADDRESS                              RESO RESORT_STAR_RATING    TOWN_ID MANAGER_ID
+---------- -------------------------------------------------- -------------------------------------------------- ---- ------------------ ---------- ----------
+         1 Byron Bay Exclusive Resort                         1 Karma Road                                       2481                4.6          1          3
+         2 Amazing Resort                                     5B Lincoln Way                                     3564                  4          9           
+         3 Alice Springs Resort                               1 Wonderland Road                                  0870                  5          5           
+         4 Broome Awesome Resort                              1 Crystal Clear Road                               6725                  5          6          1
+         5 Byron Bay Super Resort                             675 Lennon Street                                  2481                  3          1           
+         6 Gympie Luxury Resort                               1234 Gympie Hwy                                    4570                             4          5
+         7 Taree Exclusive Resort                             78 Station Road                                    2430                  5          8          4
+         8 King Resort at Kingaroy                            23A Town Road                                      4610                             3           
+         9 Queen Resort                                       45 Mount Isa Road                                  4825                2.5          7           
+        10 Mudgee Budget Resort                               40 Moonlight Road                                  2850                             2           
+
+10 rows selected. 
+
+SQL> --========================= END CHECK Q3 OUTPUT ====================================---
+SQL> 
+SQL> ------------- Question 4 Mods --------------------------------------------------
+SQL> @Q4-mc-plsql.sql
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> -- Q4. PL/SQL (20 marks)
+SQL> ---------------------------------------------------------------------------------------------------
+SQL> /*
+SQL>Your answers for these tasks must be placed in the supplied SQL Script Q4-mc-plsql.sql
+SQL>
+SQL>For each of these questions, as part of your answer, you must create a set of SQL commands which will 
+SQL>demonstrate the successful operation of your trigger (as an example see the file emp_dept-test-trigger.sql 
+SQL>from the emp-dept trigger lab exercise) - these tests are part of the awarded marks for each question. 
+SQL>Place these commands below your trigger definition for each of the tasks. Ensure your trigger definition 
+SQL>finishes with a slash(/) and blank following line as detailed in the lab 11 notes.
+SQL>*/
+SQL> 
+SQL> /*
+SQL>(i) Write a trigger which will, from this point forward, automatically maintain the completed bookings 
+SQL>attribute you added in Q3(ii).
+SQL>[4 marks]
+SQL>*/
+SQL> DROP TRIGGER chk_if_resort_booked_by_guest;
+
+Error starting at line : 19 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+DROP TRIGGER chk_if_resort_booked_by_guest
+Error report -
+ORA-04080: trigger 'CHK_IF_RESORT_BOOKED_BY_GUEST' does not exist
+04080. 00000 -  "trigger '%s' does not exist"
+*Cause:    The TRIGGER name is invalid.
+*Action:   Check the trigger name.
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER maintain_guest_bookings AFTER
+  2      UPDATE OF booking_state ON booking
+  3      FOR EACH ROW
+  4      --WHEN (old.booking_from > sysdate)
+  5  DECLARE
+  6      v_guest_bookings   NUMBER(5);
+  7  BEGIN
+  8      IF
+  9          :new.booking_from > SYSDATE AND :new.booking_state = 'C'
+ 10      THEN
+ 11          raise_application_error(-20003,'Future booking cannot have booking state as C (completed).');
+ 12      ELSE
+ 13          SELECT
+ 14              guest_bookings
+ 15          INTO
+ 16              v_guest_bookings
+ 17          FROM
+ 18              guest
+ 19          WHERE
+ 20              guest_no =:new.guest_no;
+ 21  
+ 22          IF
+ 23              :new.booking_state = 'C' AND :old.booking_state <> 'C'
+ 24          THEN
+ 25              UPDATE guest
+ 26                  SET
+ 27                      guest_bookings = v_guest_bookings + 1
+ 28              WHERE
+ 29                  guest_no =:new.guest_no;
+ 30  
+ 31          ELSIF :old.booking_state = 'C' AND :new.booking_state <> 'C' THEN
+ 32              UPDATE guest
+ 33                  SET
+ 34                      guest_bookings = v_guest_bookings - 1
+ 35              WHERE
+ 36                  guest_no =:new.guest_no;
+ 37  
+ 38          END IF;
+ 39  
+ 40      END IF;
+ 41  END;
+ 42  /
+
+Trigger MAINTAIN_GUEST_BOOKINGS compiled
+
+SQL> 
+SQL> --TESTING TRIGGER 1
+SQL> 
+SQL> -- Checking the data in booking table
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  ORDER BY
+  6      booking_id;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+50 rows selected. 
+
+SQL> 
+SQL> -- Checking the data in guest table.
+SQL> 
+SQL> SELECT
+  2      guest_no,
+  3      guest_name,
+  4      guest_bookings
+  5  FROM
+  6      guest
+  7  ORDER BY
+  8      guest_no;
+
+  GUEST_NO GUEST_NAME                                         GUEST_BOOKINGS
+---------- -------------------------------------------------- --------------
+         1 Martin Garnam                                                   3
+         2 Emmalyn Yaldren                                                 4
+         3 Justin Parkhouse                                                6
+         4 Ase Heugel                                                      4
+         5 Lorna Tumber                                                    7
+         6 Wood Langelaan                                                  6
+         7 Edna Windus                                                     3
+         8 Thibaut Fownes                                                  3
+         9 Laurens Burnhams                                                5
+        10 Beau Waterfield                                                 4
+
+10 rows selected. 
+
+SQL> 
+SQL> --Adding a new booking for guest 1
+SQL> 
+SQL> INSERT INTO booking VALUES (
+  2      51,
+  3      TO_DATE('30-sep-2019','DD-MON-YYYY'),
+  4      TO_DATE('1-oct-2019','DD-MON-YYYY'),
+  5      3,
+  6      0,
+  7      645.49,
+  8      1,
+  9      2,
+ 10      10,
+ 11      'P'
+ 12  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Checking the data in booking table after the new booking has been added
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 P
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+51 rows selected. 
+
+SQL> 
+SQL> -- Checking the data in guest table after the new booking has been added
+SQL> 
+SQL> SELECT
+  2      guest_no,
+  3      guest_name,
+  4      guest_bookings
+  5  FROM
+  6      guest
+  7  ORDER BY
+  8      guest_no;
+
+  GUEST_NO GUEST_NAME                                         GUEST_BOOKINGS
+---------- -------------------------------------------------- --------------
+         1 Martin Garnam                                                   3
+         2 Emmalyn Yaldren                                                 4
+         3 Justin Parkhouse                                                6
+         4 Ase Heugel                                                      4
+         5 Lorna Tumber                                                    7
+         6 Wood Langelaan                                                  6
+         7 Edna Windus                                                     3
+         8 Thibaut Fownes                                                  3
+         9 Laurens Burnhams                                                5
+        10 Beau Waterfield                                                 4
+
+10 rows selected. 
+
+SQL> 
+SQL> --Updating the state of booking once the booking is completed.
+SQL> 
+SQL> UPDATE booking
+  2      SET
+  3          booking_state = 'C'
+  4  WHERE
+  5      booking_id = 51;
+
+1 row updated.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Checking the data in booking table after the new booking has been updated
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 C
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+51 rows selected. 
+
+SQL> 
+SQL> -- Checking the data in guest table after the new booking has been updated
+SQL> 
+SQL> SELECT
+  2      guest_no,
+  3      guest_name,
+  4      guest_bookings
+  5  FROM
+  6      guest;
+
+  GUEST_NO GUEST_NAME                                         GUEST_BOOKINGS
+---------- -------------------------------------------------- --------------
+         1 Martin Garnam                                                   4
+         2 Emmalyn Yaldren                                                 4
+         3 Justin Parkhouse                                                6
+         4 Ase Heugel                                                      4
+         5 Lorna Tumber                                                    7
+         6 Wood Langelaan                                                  6
+         7 Edna Windus                                                     3
+         8 Thibaut Fownes                                                  3
+         9 Laurens Burnhams                                                5
+        10 Beau Waterfield                                                 4
+
+10 rows selected. 
+
+SQL> 
+SQL> --Updating the state of booking back to P to check the trigger
+SQL> 
+SQL> UPDATE booking
+  2      SET
+  3          booking_state = 'P'
+  4  WHERE
+  5      booking_id = 51;
+
+1 row updated.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Checking the data in booking table after the new booking has been updated again
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 P
+         1 01/JUN/19 03/JUN/19                2                  0          120.5          3          1          9 C
+         2 01/JUN/19 07/JUN/19                2                  2         710.45          5          1          1 C
+         3 06/JUN/19 05/JUL/19                1                  4        2020.45          2          6          1 C
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+         6 07/JUL/19 18/JUL/19                4                  2         876.56          7          6          1 C
+         7 14/JUL/19 21/JUL/19                2                  2         1575.8          6          3          2 C
+         8 18/JUL/19 20/JUL/19                2                  1         435.65          8          5          3 C
+         9 10/JUL/19 27/JUL/19                2                  1         675.87         10          2          4 C
+        10 22/JUL/19 25/JUL/19                4                  1         956.45          9          3          2 C
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        12 16/JUL/19 19/JUL/19                1                  3         564.24          3          5          5 C
+        13 18/JUL/19 22/JUL/19                2                  2         723.17          4          4          3 C
+        14 03/JUL/19 07/JUL/19                5                  2         754.31          5          3         10 C
+        15 07/AUG/19 10/AUG/19                2                  3         765.45          6          3          4 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        17 11/JUL/19 17/JUL/19                2                  1         897.98          3          3          3 C
+        18 13/JUL/19 15/JUL/19                3                  2         754.89          5          1          2 C
+        19 03/AUG/19 06/AUG/19                2                  4         786.35          9          9          5 C
+        20 08/AUG/19 10/AUG/19                3                  0         329.45          7          7          5 C
+        21 15/AUG/19 18/AUG/19                2                  0          317.8          8          1         10 C
+        22 17/AUG/19 24/AUG/19                2                  2           1298         10          5          3 C
+        23 19/AUG/19 22/AUG/19                4                  2        1098.87          4          1          5 C
+        24 18/AUG/19 21/AUG/19                3                  3         546.45          6          1          6 C
+        25 01/AUG/19 05/AUG/19                3                  0            300          5          2          9 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        27 25/AUG/19 30/AUG/19                3                  2         865.34          3          1          6 C
+        28 01/SEP/19 04/SEP/19                4                  0         454.35          6          1          7 C
+        29 03/SEP/19 04/SEP/19                2                  3         187.67          2          2          7 C
+        30 18/AUG/19 21/AUG/19                2                  0         200.67          4          1          3 C
+        31 24/AUG/19 28/AUG/19                2                  0            240          5          1          9 C
+        32 14/SEP/19 20/SEP/19                2                  4        1856.45          8          1          6 C
+        33 27/AUG/19 03/SEP/19                3                  1         675.89          5          1          1 C
+        34 22/AUG/19 25/AUG/19                2                  2         564.34          9          3          4 C
+        35 29/AUG/19 30/AUG/19                1                  2         213.65          7          7          5 C
+        36 04/SEP/19 10/SEP/19                2                  3         765.54         10          2          2 C
+        37 02/OCT/19 10/OCT/19                4                  2        1600.65          2          9          5 C
+        38 10/DEC/19 12/DEC/19                4                  1         345.34          3          2          6 F
+        39 25/AUG/19 29/AUG/19                2                  3           1598          6         12          1 C
+        40 28/AUG/19 02/SEP/19                4                  0            400          3          3          9 C
+        41 29/AUG/19 03/SEP/19                2                  3         765.67         10          6          3 C
+        42 05/SEP/19 07/SEP/19                2                  3         430.54          6          2          7 C
+        43 10/SEP/19 20/SEP/19                1                  4        1200.67          5          6          1 C
+        44 20/SEP/19 24/SEP/19                2                  3         783.65          9          4          7 C
+        45 03/OCT/19 09/OCT/19                4                  0         787.45          4          1          7 C
+        46 07/OCT/19 13/OCT/19                3                  2         564.34          3          3          4 C
+        47 08/DEC/19 10/DEC/19                1                  4         564.34          7          6          3 F
+        48 03/OCT/19 07/OCT/19                2                  1         543.39          9          1          1 C
+        49 03/NOV/19 05/NOV/19                4                  0            200          2          2          9 C
+        50 10/NOV/19 14/NOV/19                3                  0         645.49          7          2         10 F
+
+51 rows selected. 
+
+SQL> 
+SQL> -- Checking the data in guest table after the new booking has been updated again
+SQL> 
+SQL> SELECT
+  2      guest_no,
+  3      guest_name,
+  4      guest_bookings
+  5  FROM
+  6      guest;
+
+  GUEST_NO GUEST_NAME                                         GUEST_BOOKINGS
+---------- -------------------------------------------------- --------------
+         1 Martin Garnam                                                   3
+         2 Emmalyn Yaldren                                                 4
+         3 Justin Parkhouse                                                6
+         4 Ase Heugel                                                      4
+         5 Lorna Tumber                                                    7
+         6 Wood Langelaan                                                  6
+         7 Edna Windus                                                     3
+         8 Thibaut Fownes                                                  3
+         9 Laurens Burnhams                                                5
+        10 Beau Waterfield                                                 4
+
+10 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>(ii) Write a trigger which will prevent a review from being entered if the guest has not stayed at the 
+SQL>resort they are adding a review for (ie. the stay has not been completed).
+SQL>[6 marks]
+SQL>*/
+SQL> 
+SQL> DROP TRIGGER chk_if_resort_booked_by_guest;
+
+Error starting at line : 179 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+DROP TRIGGER chk_if_resort_booked_by_guest
+Error report -
+ORA-04080: trigger 'CHK_IF_RESORT_BOOKED_BY_GUEST' does not exist
+04080. 00000 -  "trigger '%s' does not exist"
+*Cause:    The TRIGGER name is invalid.
+*Action:   Check the trigger name.
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER chk_if_resort_booked_by_guest BEFORE
+  2      INSERT ON review
+  3      FOR EACH ROW
+  4  DECLARE
+  5      v_review_stay_not_comp_prob   NUMBER(7);
+  6  BEGIN
+  7      SELECT
+  8          COUNT(*)
+  9      INTO
+ 10          v_review_stay_not_comp_prob
+ 11      FROM
+ 12          booking
+ 13      WHERE
+ 14          resort_id =:new.resort_id
+ 15          AND   guest_no =:new.guest_no
+ 16          AND   booking_to <=:new.review_date
+ 17          AND   booking_state = 'C';
+ 18  
+ 19      IF
+ 20          v_review_stay_not_comp_prob = 0
+ 21      THEN
+ 22          raise_application_error(-20002,'SORRY, REVIEW REQUEST CANNOT BE COMPLETED FOR RESORT '
+ 23          ||:new.resort_id
+ 24          || ' AS YOU HAVE NOT YET COMPLETED YOUR STAY AT THIS RESORT.');
+ 25      END IF;
+ 26  
+ 27  END;
+ 28  /
+
+Trigger CHK_IF_RESORT_BOOKED_BY_GUEST compiled
+
+SQL> 
+SQL> --TESTING TRIGGER 2
+SQL> 
+SQL> -- Checking the data in booking table for guest 1
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      guest_no = 1
+  7  ORDER BY
+  8      booking_from;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 P
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+
+SQL> 
+SQL> -- Checking the data in booking table for guest 1 and resort 7
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      guest_no = 1
+  7      AND   resort_id = 7
+  8  ORDER BY
+  9      resort_id;
+no rows selected
+SQL> 
+SQL> --Adding a review in review table for guest 1 and resort 7. Cannot be done.
+SQL> 
+SQL> INSERT INTO review VALUES (
+  2      16,
+  3      'Writing review for resort 7 where I have never stayed.!',
+  4      TO_DATE('21-oct-2019','DD-MON-YYYY'),
+  5      5,
+  6      1,
+  7      7
+  8  );
+
+Error starting at line : 237 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO review VALUES (
+    16,
+    'Writing review for resort 7 where I have never stayed.!',
+    TO_DATE('21-oct-2019','DD-MON-YYYY'),
+    5,
+    1,
+    7
+)
+Error report -
+ORA-20002: SORRY, REVIEW REQUEST CANNOT BE COMPLETED FOR RESORT 7 AS YOU HAVE NOT YET COMPLETED YOUR STAY AT THIS RESORT.
+ORA-06512: at "LSMI1.CHK_IF_RESORT_BOOKED_BY_GUEST", line 19
+ORA-04088: error during execution of trigger 'LSMI1.CHK_IF_RESORT_BOOKED_BY_GUEST'
+
+SQL> 
+SQL> -- Checking the data in booking table for guest 1 and resort 10
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      guest_no = 1
+  7      AND   resort_id = 10
+  8  ORDER BY
+  9      resort_id;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 P
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+
+SQL> 
+SQL> --Adding a review in review table for guest 1 and resort 10. Cannot be done.
+SQL> 
+SQL> INSERT INTO review VALUES (
+  2      16,
+  3      'Writing review for resort 10 where booking state for any of the bookings is not C.!',
+  4      TO_DATE('26-nov-2019','DD-MON-YYYY'),
+  5      5,
+  6      1,
+  7      10
+  8  );
+
+Error starting at line : 260 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO review VALUES (
+    16,
+    'Writing review for resort 10 where booking state for any of the bookings is not C.!',
+    TO_DATE('26-nov-2019','DD-MON-YYYY'),
+    5,
+    1,
+    10
+)
+Error report -
+ORA-20002: SORRY, REVIEW REQUEST CANNOT BE COMPLETED FOR RESORT 10 AS YOU HAVE NOT YET COMPLETED YOUR STAY AT THIS RESORT.
+ORA-06512: at "LSMI1.CHK_IF_RESORT_BOOKED_BY_GUEST", line 19
+ORA-04088: error during execution of trigger 'LSMI1.CHK_IF_RESORT_BOOKED_BY_GUEST'
+
+SQL> 
+SQL> -- Checking the data in booking table for guest 1 again.
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      guest_no = 1
+  7  ORDER BY
+  8      booking_from;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        11 01/JUL/19 04/JUL/19                2                  0         221.65          1         16          1 C
+        16 10/JUL/19 11/JUL/19                2                  3         450.34          1          9          1 C
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+        51 30/SEP/19 01/OCT/19                3                  0         645.49          1          2         10 P
+         4 06/NOV/19 08/NOV/19                3                  3         407.45          1          2         10 P
+
+SQL> 
+SQL> -- Checking the data in booking table for guest 1 and resort 2.
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      guest_no = 1
+  7      AND   resort_id = 2
+  8  ORDER BY
+  9      resort_id;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+        26 07/AUG/19 11/AUG/19                4                  1         867.56          1          2          2 C
+
+SQL> 
+SQL> --Adding a review in review table for guest 1 and resort 10. Cannot be done.
+SQL> 
+SQL> INSERT INTO review VALUES (
+  2      16,
+  3      'Good',
+  4      SYSDATE,
+  5      5,
+  6      1,
+  7      2
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Checking the data in review table for guest 1 and resort 2.
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      review
+  5  WHERE
+  6      guest_no = 1
+  7      AND   resort_id = 2
+  8  ORDER BY
+  9      resort_id;
+
+ REVIEW_ID REVIEW_COMMENT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       REVIEW_DA REVIEW_RATING   GUEST_NO  RESORT_ID
+---------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------- ------------- ---------- ----------
+        16 Good                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 06/NOV/19             5          1          2
+
+SQL> 
+SQL> 
+SQL> /*
+SQL>(iii) Monash Cabins has discovered a major weakness with their database design - it is possible for a 
+SQL>booking to be added which overlaps/conflicts with a current booking. For example a booking may be made 
+SQL>for a particular resort and cabin which starts before a currently recorded booking and ends in the middle 
+SQL>of a current booking. Write a trigger which will prevent all overlaps/conflicts occuring (here you will 
+SQL>need to carefully consider which situations could cause such overlaps/conflicts).
+SQL>[10 marks]
+SQL>*/
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER chk_new_book_dates_for_cabin BEFORE
+  2      INSERT ON booking
+  3      FOR EACH ROW
+  4  DECLARE
+  5      v_book_problem   NUMBER(7);
+  6  BEGIN
+  7      SELECT
+  8          COUNT(*)
+  9      INTO
+ 10          v_book_problem
+ 11      FROM
+ 12          booking
+ 13      WHERE
+ 14          cabin_no =:new.cabin_no
+ 15          AND   resort_id =:new.resort_id
+ 16          AND   (
+ 17              (
+ 18                  :new.booking_from < booking_from
+ 19                  AND   :new.booking_to BETWEEN booking_from AND booking_to
+ 20              )
+ 21              OR    (
+ 22                  :new.booking_from BETWEEN booking_from AND booking_to
+ 23                  AND   :new.booking_to > booking_to
+ 24              )
+ 25              OR    (
+ 26                  :new.booking_from BETWEEN booking_from AND booking_to
+ 27                  AND   :new.booking_to BETWEEN booking_from AND booking_to
+ 28              )
+ 29              OR    (
+ 30                  :new.booking_from < booking_from
+ 31                  AND   :new.booking_to > booking_to
+ 32              )
+ 33          )
+ 34          AND   booking_state NOT IN (
+ 35              'C',
+ 36              'D'
+ 37          );
+ 38  
+ 39      IF
+ 40          v_book_problem > 0
+ 41      THEN
+ 42          raise_application_error(-20000,'SORRY, BOOKING REQUEST CANNOT BE COMPLETED AS THERE IS ALREADY A BOOKING FOR cabin_no='
+ 43          ||:new.cabin_no
+ 44          || ' AND resort_id='
+ 45          ||:new.resort_id
+ 46          || ' FOR THE SELECTED DATES.');
+ 47  
+ 48      END IF;
+ 49  
+ 50  END;
+ 51  /
+
+Trigger CHK_NEW_BOOK_DATES_FOR_CABIN compiled
+
+SQL> 
+SQL> --TESTING TRIGGER 3
+SQL> 
+SQL> -- Checking the data in booking table for resort 1 and cabin 4.
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      cabin_no = 4
+  7      AND   resort_id = 1
+  8  ORDER BY
+  9      booking_from;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+
+SQL> 
+SQL> -- Booking 7/12 - 17/12 
+SQL> 
+SQL> -- Adding a new booking that starts before and ends in an existing booking. Cannot be done.
+SQL> 
+SQL> INSERT INTO booking (
+  2      booking_id,
+  3      booking_from,
+  4      booking_to,
+  5      booking_noadults,
+  6      booking_nochildren,
+  7      booking_charge,
+  8      guest_no,
+  9      cabin_no,
+ 10      resort_id
+ 11  ) VALUES (
+ 12      52,
+ 13      TO_DATE('05-dec-2019','DD-MON-YYYY'),
+ 14      TO_DATE('10-dec-2019','DD-MON-YYYY'),
+ 15      4,
+ 16      0,
+ 17      787.45,
+ 18      4,
+ 19      4,
+ 20      1
+ 21  );
+
+Error starting at line : 397 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO booking (
+    booking_id,
+    booking_from,
+    booking_to,
+    booking_noadults,
+    booking_nochildren,
+    booking_charge,
+    guest_no,
+    cabin_no,
+    resort_id
+) VALUES (
+    52,
+    TO_DATE('05-dec-2019','DD-MON-YYYY'),
+    TO_DATE('10-dec-2019','DD-MON-YYYY'),
+    4,
+    0,
+    787.45,
+    4,
+    4,
+    1
+)
+Error report -
+ORA-20000: SORRY, BOOKING REQUEST CANNOT BE COMPLETED AS THERE IS ALREADY A BOOKING FOR cabin_no=4 AND resort_id=1 FOR THE SELECTED DATES.
+ORA-06512: at "LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN", line 39
+ORA-04088: error during execution of trigger 'LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN'
+
+SQL> 
+SQL> 
+SQL> -- Adding a new booking that starts inside and ends outside an existing booking. Cannot be done.
+SQL> 
+SQL> INSERT INTO booking (
+  2      booking_id,
+  3      booking_from,
+  4      booking_to,
+  5      booking_noadults,
+  6      booking_nochildren,
+  7      booking_charge,
+  8      guest_no,
+  9      cabin_no,
+ 10      resort_id
+ 11  ) VALUES (
+ 12      52,
+ 13      TO_DATE('10-dec-2019','DD-MON-YYYY'),
+ 14      TO_DATE('20-dec-2019','DD-MON-YYYY'),
+ 15      4,
+ 16      0,
+ 17      787.45,
+ 18      4,
+ 19      4,
+ 20      1
+ 21  );
+
+Error starting at line : 422 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO booking (
+    booking_id,
+    booking_from,
+    booking_to,
+    booking_noadults,
+    booking_nochildren,
+    booking_charge,
+    guest_no,
+    cabin_no,
+    resort_id
+) VALUES (
+    52,
+    TO_DATE('10-dec-2019','DD-MON-YYYY'),
+    TO_DATE('20-dec-2019','DD-MON-YYYY'),
+    4,
+    0,
+    787.45,
+    4,
+    4,
+    1
+)
+Error report -
+ORA-20000: SORRY, BOOKING REQUEST CANNOT BE COMPLETED AS THERE IS ALREADY A BOOKING FOR cabin_no=4 AND resort_id=1 FOR THE SELECTED DATES.
+ORA-06512: at "LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN", line 39
+ORA-04088: error during execution of trigger 'LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN'
+
+SQL> 
+SQL> -- Adding a new booking that starts and ends within an existing booking. Cannot be done.
+SQL> 
+SQL> INSERT INTO booking (
+  2      booking_id,
+  3      booking_from,
+  4      booking_to,
+  5      booking_noadults,
+  6      booking_nochildren,
+  7      booking_charge,
+  8      guest_no,
+  9      cabin_no,
+ 10      resort_id
+ 11  ) VALUES (
+ 12      52,
+ 13      TO_DATE('10-dec-2019','DD-MON-YYYY'),
+ 14      TO_DATE('12-dec-2019','DD-MON-YYYY'),
+ 15      4,
+ 16      0,
+ 17      787.45,
+ 18      4,
+ 19      4,
+ 20      1
+ 21  );
+
+Error starting at line : 446 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO booking (
+    booking_id,
+    booking_from,
+    booking_to,
+    booking_noadults,
+    booking_nochildren,
+    booking_charge,
+    guest_no,
+    cabin_no,
+    resort_id
+) VALUES (
+    52,
+    TO_DATE('10-dec-2019','DD-MON-YYYY'),
+    TO_DATE('12-dec-2019','DD-MON-YYYY'),
+    4,
+    0,
+    787.45,
+    4,
+    4,
+    1
+)
+Error report -
+ORA-20000: SORRY, BOOKING REQUEST CANNOT BE COMPLETED AS THERE IS ALREADY A BOOKING FOR cabin_no=4 AND resort_id=1 FOR THE SELECTED DATES.
+ORA-06512: at "LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN", line 39
+ORA-04088: error during execution of trigger 'LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN'
+
+SQL> 
+SQL> -- Adding a new booking that starts and ends outside (but overlaps) an existing booking. Cannot be done.
+SQL> 
+SQL> INSERT INTO booking (
+  2      booking_id,
+  3      booking_from,
+  4      booking_to,
+  5      booking_noadults,
+  6      booking_nochildren,
+  7      booking_charge,
+  8      guest_no,
+  9      cabin_no,
+ 10      resort_id
+ 11  ) VALUES (
+ 12      52,
+ 13      TO_DATE('05-dec-2019','DD-MON-YYYY'),
+ 14      TO_DATE('18-dec-2019','DD-MON-YYYY'),
+ 15      4,
+ 16      0,
+ 17      787.45,
+ 18      4,
+ 19      4,
+ 20      1
+ 21  );
+
+Error starting at line : 470 File @ /Volumes/GoogleDrive/My Drive/UNITS-Marking/2019/FIT9132-S2-AssignmentMarking/Ass3/_MarkingScripts/ALL_Questions/_Sample Solution/Q4-mc-plsql.sql
+In command -
+INSERT INTO booking (
+    booking_id,
+    booking_from,
+    booking_to,
+    booking_noadults,
+    booking_nochildren,
+    booking_charge,
+    guest_no,
+    cabin_no,
+    resort_id
+) VALUES (
+    52,
+    TO_DATE('05-dec-2019','DD-MON-YYYY'),
+    TO_DATE('18-dec-2019','DD-MON-YYYY'),
+    4,
+    0,
+    787.45,
+    4,
+    4,
+    1
+)
+Error report -
+ORA-20000: SORRY, BOOKING REQUEST CANNOT BE COMPLETED AS THERE IS ALREADY A BOOKING FOR cabin_no=4 AND resort_id=1 FOR THE SELECTED DATES.
+ORA-06512: at "LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN", line 39
+ORA-04088: error during execution of trigger 'LSMI1.CHK_NEW_BOOK_DATES_FOR_CABIN'
+
+SQL> 
+SQL> -- Adding a new booking that is valid
+SQL> 
+SQL> INSERT INTO booking (
+  2      booking_id,
+  3      booking_from,
+  4      booking_to,
+  5      booking_noadults,
+  6      booking_nochildren,
+  7      booking_charge,
+  8      guest_no,
+  9      cabin_no,
+ 10      resort_id
+ 11  ) VALUES (
+ 12      52,
+ 13      TO_DATE('18-dec-2019','DD-MON-YYYY'),
+ 14      TO_DATE('20-dec-2019','DD-MON-YYYY'),
+ 15      4,
+ 16      0,
+ 17      787.45,
+ 18      4,
+ 19      4,
+ 20      1
+ 21  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> -- Checking the data in booking table for resort 1 and cabin 4 after the new booking has been added.
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      booking
+  5  WHERE
+  6      cabin_no = 4
+  7      AND   resort_id = 1
+  8  ORDER BY
+  9      booking_from;
+
+BOOKING_ID BOOKING_F BOOKING_T BOOKING_NOADULTS BOOKING_NOCHILDREN BOOKING_CHARGE   GUEST_NO   CABIN_NO  RESORT_ID B
+---------- --------- --------- ---------------- ------------------ -------------- ---------- ---------- ---------- -
+         5 07/DEC/19 17/DEC/19                2                  4        1098.67          5          4          1 F
+        52 18/DEC/19 20/DEC/19                4                  0         787.45          4          4          1 F
+
+SQL> 
+SQL> set echo on
+SQL> --============================== END RUN ======================================---
+SQL> set echo off
